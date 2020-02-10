@@ -27,12 +27,12 @@ class DataPackage:
         self.yTest = None 
  
 
-
+baseData = '\Data\\'
 
 def readData(dataType, columns=None):
     if columns:
-       df = pd.read_csv('C:\\Users\\mwest\\Desktop\\ML\\source\Data\\' + dataType + '.csv' , usecols=columns) 
-    df = pd.read_csv('C:\\Users\\mwest\\Desktop\ML\\source\\Data\\' + dataType + '.csv') 
+       df = pd.read_csv(baseData + dataType + '.csv' , usecols=columns) 
+    df = pd.read_csv(baseData + dataType + '.csv') 
     sampleRows = rows
     if sampleRows > df.shape[0]:
         sampleRows = df.shape[0]
